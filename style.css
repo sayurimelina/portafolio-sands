@@ -1,0 +1,173 @@
+html::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+nav {
+    display: flex ;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 3%;
+    width: 94%;
+    position: fixed;
+    top: 0;
+    transition: background-color 0.6s ease-in-out; /*VA CON EL MAIN JS*/
+    z-index: 2;
+}
+
+nav img {
+    width: 90px; /* ajusta según sea necesario */
+    height: auto;/* mantiene la proporción original */
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex ;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* BOTON DE NAV BAR */
+
+button{
+    position: relative;
+    border: none;
+    padding: 0.5rem 1rem;
+    outline: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    background-color: #000;
+    color: white;
+    cursor: pointer;
+    margin-left: 15px;
+    transition: transform .3s ease-in-out;
+}
+
+button::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 98%;
+    height: 95%;
+    z-index: -1;
+    background: #000000;
+    background-size: 800%, 100%; 
+    border-radius: 3px;
+}
+
+button::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 102.25%;
+    height: 105%;
+    z-index: -1;
+    background: linear-gradient(45deg,#ff6a00, #ff006a, #6a00ff, #006aff, #00ff6a, #6aff00), #ffffff;
+    background-size: 800%, 100%; 
+    border-radius: 3px;
+    filter: blur(2px);
+    animation: glowing 25s linear infinite;
+}
+
+button:hover{
+    transform: scale(1.1);
+    border:1px solid #d7d7d7;
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.126);
+}
+button:hover:before {
+    transform: scale(0);
+}
+
+nav li {
+    margin: 0 20px;
+}
+
+li a {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 1.2rem;
+    position: relative;
+    transition: color 0.3s;
+}
+
+li a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px; /* Altura de la línea */
+    bottom: -3px;
+    left: 0;
+    background-color: #ffffff; /* Color de la línea */
+    visibility: hidden;
+    transform: scaleX(0); /* Inicialmente la línea no tiene ancho */
+    transition: transform .3s ease, visibility .3s ease;
+}
+
+li a:hover::before {
+    visibility: visible;
+    transform: scaleX(1); /* Aparece y crece la línea al hacer hover */
+}
+
+header {
+    background: linear-gradient(to bottom,rgba(40, 40, 40, 0.653) 0%, rgba(0, 0, 0, 0.788) 66%, rgb(0, 0, 0) 100%), url('./foto.jpg') center/cover no-repeat;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    padding: 25vh 30vw 0 6vw ;  /*up right down left*/
+    /* position: relative; */
+    z-index: 1;
+    height: 75vh;
+}
+
+h1{
+    font-size: 3.7rem;
+}
+
+p{
+    font-size: 2rem;
+}
+
+section {
+    padding: 6vh 6vw;
+}
+
+/******************** CARACTERISTICAS **********************/
+
+.caracteristicas{
+    background: #000;
+    height: 100vh;
+    font-size: 2rem;
+    color: white;
+}
+
+.caja-caracteristicas h2{
+    font-size: 2rem;
+    color: white;
+}
+
+section p{
+    font-size: 1.5rem;
+    color: white;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0 ;
+    }
+    50% {
+        background-position: 400% 0 ;
+    }
+    100% {
+        background-position: 0 0 ;
+    }
+}
