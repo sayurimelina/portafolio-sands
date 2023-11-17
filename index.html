@@ -28,6 +28,7 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="main.js"></script>
+    <script src="https://kit.fontawesome.com/1a2054c941.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -172,7 +173,7 @@
             <a href="#" class="cta-button">Obtener Ahora</a>
         </div>
         <div class="pricing-card">
-            <h2>Plan Premium</h2>
+            <h2> Pag Web Responsive </h2>
             <p>La mejor opción para usuarios avanzados</p>
             <div class="price">$19.99/mes</div>
             <div class="feature">
@@ -198,9 +199,9 @@
             <a href="#" class="cta-button">Obtener Ahora</a>
         </div>
         <div class="pricing-card">
-            <h2>Plan Premium</h2>
-            <p>La mejor opción para usuarios avanzados</p>
-            <div class="price">$19.99/mes</div>
+            <h2> E-Commerce </h2>
+            <p>La mejor Opción si tienes una tienda online.</p>
+            <div class="price">$300</div>
             <div class="feature">
                 <i class="fas fa-check"></i>
                 Acceso a todas las funciones
@@ -225,18 +226,67 @@
         </div>
     </section>
 
-    <!---------------------  PORTAFOLIO ------------------------->
-
-    <section id="trabajos">
-    </section>
     <!---------------------  CONTACTO ------------------------->
 
     <section id="contacto">
+        <form>
+            <fieldset>
+                <legend>Contactanos</legend>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+          
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+          
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+          
+                <button type="submit">Enviar</button>
+            </fieldset>
+        </form>
     </section>
 
+    <!--------------------- FOOTER ------------------------->
+
     <footer>
+
         <!-- Pie de página -->
+        
+        <div class="footer-container-content">
+            
+            <img class="logo-footer" src="logoBlanco.png" href="index.html" alt="Logo de tu sitio" onclick="window.location.href='index.html'">
+            
+            <div class="container-contact">
+                <h2>Contact Us</h2>
+                <p>Direccion</p>
+                <p>youremail@company.com</p>
+                <p>+593 083 75 772</p>
+            </div>
+
+            <div class="container-social">
+                <h2>Siguenos</h2>
+                <div class="container-social-link">
+                    <a href=""><i class="fa-brands fa-facebook" style="color: #ffffff;"></i></a>
+                    <p>sands45</p>
+                </div>
+                <div class="container-social-link">
+                    <a href=""><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
+                    <p>sands45</p>
+                </div>
+                <div class="container-social-link">
+                    <a href=""><i class="fa-brands fa-twitter" style="color: #ffffff;"></i></a>
+                    <p>sands45</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="copyright-container">
+            <p>Copyright 2023</p>
+        </div>
+
     </footer>
+
 </body>
 
 </html>
